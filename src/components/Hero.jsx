@@ -32,7 +32,6 @@ function Hero() {
     <section className="relative w-full h-screen overflow-hidden bg-black">
       <video
         ref={videoRef}
-        muted
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
