@@ -10,7 +10,7 @@ function Hero() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true, easing: 'ease-out' })
     const el = videoRef.current
-    const handleEnd = () => setIsPlaying(false)
+    const handleEnd = () => { el.currentTime = 0; setIsPlaying(false) }
     if (el) el.addEventListener('ended', handleEnd)
     return () => { if (el) el.removeEventListener('ended', handleEnd) }
   }, [])
